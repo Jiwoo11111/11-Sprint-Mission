@@ -21,8 +21,7 @@
             type="email"
             placeholder="이메일을 입력해주세요"
           />
-          <p class="email-null">이메일을 입력해주세요.</p>
-          <p class="email-check">잘못된 이메일 형식입니다.</p>
+          <div class="email-error-message"></div>
         </div>
         <div class="inputarea">
           <label for="password">비밀번호</label>
@@ -35,18 +34,12 @@
               placeholder="비밀번호를 입력해주세요"
             />
             <img
-              class="eye-off"
+              class="eyeIcon"
               src="img/input-icon/Property 1=Variant2.svg"
-              alt="passwordEyeOff"
-            />
-            <img
-              class="eye-on"
-              src="img/input-icon/Property 1=Default.svg"
-              alt="passwordEyeOn"
+              alt="Toggle password visibility"
             />
           </div>
-          <p class="password-null">비밀번호를 입력해주세요.</p>
-          <p class="password-check">비밀번호를 8자 이상 입력해주세요.</p>
+          <div class="password-error-message"></div>
         </div>
         <button type="submit" id="login-btn">로그인</button>
         <div class="simple-login">

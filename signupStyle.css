@@ -1,197 +1,198 @@
-@import "reset.css";
+@import 'reset.css';
 
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
 }
 
 :root {
-    --gray-900: #111827;
-    --gray-800: #1F2937;
-    --gray-700: #374151;
-    --gray-600: #4B5563;
-    --gray-500: #6B7280;
-    --gray-400: #9CA3AF;
-    --gray-200: #E5E7EB;
-    --gray-100: #F3F4F6;
-    --gray-50: #F9FAFB;
-    --blue: #3692FF;
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-500: #6b7280;
+  --gray-400: #9ca3af;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
+  --blue: #3692ff;
 }
 
 html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .signuplogo {
-    width: 25rem;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 2.5rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
 }
 
 .inputarea {
-    margin-bottom: 2rem;
-    position: relative;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 label {
-    font-size: 1.25rem;
-    font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 input {
-    width: 37rem;
-    height: 2rem;
-    padding: 1rem 1.5rem;
-    background-color: var(--gray-100);
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-    margin-top: 1rem;
+  width: 37rem;
+  height: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--gray-100);
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  margin-top: 1rem;
 }
 
 .input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 input:focus {
-    border: solid var(--blue);
+  border: solid var(--blue);
 }
 
 ::placeholder {
-    color: var(--gray-400);
-    width: 37rem;
+  color: var(--gray-400);
+  width: 37rem;
 }
 
-.eye-off, .eye-on, .verify-eye-off, .verify-eye-on {
-    position: absolute;
-    width: 1.5rem;
-    right: 1.5rem;
-    top: 50%;
-    cursor: pointer;
+.email-error-message,
+.password-error-message,
+.password-different-message,
+.username-error-message {
+  display: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  color: #f74747;
+  font-size: 14px;
+  font-weight: 550;
 }
 
-.eye-on, .verify-eye-on{
-    display: none;
+.eyeIcon,
+.verifyEyeIcon {
+  position: absolute;
+  width: 1.5rem;
+  right: 1.5rem;
+  top: 50%;
+  cursor: pointer;
 }
 
-.error{
-    border: 2px solid red;
-}
-
-.email-null, .password-null, .username-null, .email-check, .password-check, .password-different{
-    display: none;
-    margin-top: 10px;
-    padding-left: 10px;
-    color: #F74747;
-    font-size: 14px;
-    font-weight: 550; 
+.error {
+  border: 2px solid red;
 }
 
 #signup-btn {
-    display: flex;
-    width: 40rem;
-    height: 4rem;
-    background-color: var(--gray-400);
-    border-radius: 2.5rem;
-    color: var(--gray-100);
-    font-size: 1.5rem;
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border: none;
-    margin-bottom: 2rem;
-    cursor: not-allowed;
+  display: flex;
+  width: 40rem;
+  height: 4rem;
+  background-color: var(--gray-400);
+  border-radius: 2.5rem;
+  color: var(--gray-100);
+  font-size: 1.5rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  margin-bottom: 2rem;
+  cursor: not-allowed;
 }
 
 #signup-btn.active {
-    background-color: var(--blue); 
-    cursor: pointer;
+  background-color: var(--blue);
+  cursor: pointer;
 }
 
 .simple-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #E6F2FF;
-    height: 5rem;
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6f2ff;
+  height: 5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .simple-login-in {
-    width: 37rem;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 500;
-    justify-content: space-between;
+  width: 37rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: space-between;
 }
 
 .signup-icon {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .signup-icon img {
-    width: 3rem;
+  width: 3rem;
 }
 
 .firstuser {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--gray-800);
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 2rem;
 }
 
 .firstuser a {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-    .signup {
-        padding: 0 1rem;
-        margin-top: 2rem;
-    }
+  .signup {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
 
-    .signuplogo {
-        width: 65%;
-        margin-top: 100px;
-    }
+  .signuplogo {
+    width: 65%;
+    margin-top: 100px;
+  }
 
-    label {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
+  label {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
-    input {
-        width: 100%;
-        max-width: 25rem;
-        margin: 0 auto;
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
+  input {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 
-    ::placeholder {
-        padding: 1rem;
-    }
+  ::placeholder {
+    padding: 1rem;
+  }
 
-    #signup-btn {
-        width: 100%;
-        font-size: 1.3rem;
-    }
+  #signup-btn {
+    width: 100%;
+    font-size: 1.3rem;
+  }
 
-    .simple-login-in {
-        width: 100%;
-        padding: 0 2rem;
-    }
+  .simple-login-in {
+    width: 100%;
+    padding: 0 2rem;
+  }
 }

@@ -21,8 +21,7 @@
             type="email"
             placeholder="이메일을 입력해주세요"
           />
-          <p class="email-null">이메일을 입력해주세요.</p>
-          <p class="email-check">잘못된 이메일 형식입니다.</p>
+          <div class="email-error-message"></div>
         </div>
         <div class="inputarea">
           <label for="username">닉네임</label>
@@ -33,7 +32,7 @@
             type="email"
             placeholder="닉네임을 입력해주세요"
           />
-          <p class="username-null">닉네임을 입력해주세요.</p>
+          <div class="username-error-message"></div>
         </div>
         <div class="inputarea">
           <label for="password">비밀번호</label>
@@ -46,18 +45,12 @@
               placeholder="비밀번호를 입력해주세요"
             />
             <img
-              class="eye-off"
+              class="eyeIcon"
               src="img/input-icon/Property 1=Variant2.svg"
-              alt="passwordEyeOff"
-            />
-            <img
-              class="eye-on"
-              src="img/input-icon/Property 1=Default.svg"
-              alt="passwordEyeOn"
+              alt="Toggle password visibility"
             />
           </div>
-          <p class="password-null">비밀번호를 입력해주세요.</p>
-          <p class="password-check">비밀번호를 8자 이상 입력해주세요.</p>
+          <div class="password-error-message"></div>
         </div>
         <div class="inputarea">
           <label for="password-verify">비밀번호 확인</label>
@@ -70,17 +63,12 @@
               placeholder="비밀번호를 다시 한 번 입력해주세요"
             />
             <img
-              class="verify-eye-off"
+              class="verifyEyeIcon"
               src="img/input-icon/Property 1=Variant2.svg"
-              alt="passwordicon"
-            />
-            <img
-              class="verify-eye-on"
-              src="img/input-icon/Property 1=Default.svg"
-              alt="passwordEyeOn"
+              alt="Toggle password visibility"
             />
           </div>
-          <p class="password-different">비밀번호가 일치하지 않습니다.</p>
+          <div class="password-different-message"></div>
         </div>
         <a href="./login.html" id="signup-btn">회원가입</a>
         <div class="simple-login">
